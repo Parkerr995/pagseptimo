@@ -1,0 +1,115 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container-bar{
+	width: 100%;
+	max-width: 50px;
+	position: fixed;
+	left: 0;
+	top: 25%;
+	
+}
+
+.container-bar a{
+	display: block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 19px;
+	position: relative;
+	color: white;
+	transition: 0.5s;
+}
+
+.container-bar a:hover{
+	background: black;
+
+}
+
+.container-bar .fa-facebook{
+	background: #4267B2;
+	border-radius: 0px 5px 0px 0px;
+}
+.container-bar .fa-youtube{
+	background: #FF0000;
+}
+.container-bar .fa-twitter{
+	background: #1DA1F2;
+}
+.container-bar .fa-instagram{
+	background: #DB4437;
+}
+.container-bar .fa-pinterest{
+	background: #E60023;
+	border-radius: 0px 0px 5px 0px;
+
+}
+.container-bar #title{
+	position: absolute;
+	background: green;
+	padding: 0px, 8px;
+	height: 30px;
+	line-height: 30px;
+	text-align:center;
+	border-radius: 3px;
+	font-size: 15px;
+	top:12px;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	z-index:-1;
+	transition: all 0.8s ease;
+}
+
+.container-bar a:hover #title{
+	opacity: 1;
+	visibility: visible;
+	left: 60px;
+}
+
+.container-bar #title:after{
+	position: absolute;
+	content:'';
+	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+	border-left:7px solid transparent;
+	border-right: 6px solid green;
+	right: 100%;
+	top: 9px;
+
+}
+
+
+#btn_social {
+	display: none;
+}
+
+.fa-play {
+	cursor: pointer;
+	display: inline-block;
+	margin-bottom: 5px;
+	font-size: 15px;
+	color: green;
+	transform: rotate(360deg);
+	transition: 0.5s ease;
+}
+
+#btn_social:checked ~ .fa-play{
+	transform: rotate(0deg);
+}
+
+.icon-social{
+	transform: translateX(0%);
+	-webkit-box-shadow: 5px 9px 9px 9px #33FF9B;
+	box-shadow: 5px 9px 9px 9px #33FF9B;
+	transition: all 0.4s;
+}
+#btn_social:checked ~.icon-social{
+	transform: translateX(-100%);
+	margin-left: -60px;
+}
